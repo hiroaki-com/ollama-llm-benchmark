@@ -1,17 +1,17 @@
 # Ollama Multi-Model Benchmarker
 
-![Python](https://img.shields.io/badge/python-3.10+-blue.svg)
-![License](https://img.shields.io/badge/license-MIT-green.svg)
-![Colab](https://img.shields.io/badge/platform-Google%20Colab-orange.svg)
-![Ollama](https://img.shields.io/badge/Ollama-compatible-blueviolet.svg)
+[![Python](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Colab](https://img.shields.io/badge/platform-Google%20Colab-orange.svg)](https://colab.research.google.com/github/hiroaki-com/ollama-llm-benchmark/blob/main/ollama_multi_model_benchmarker_en.ipynb)
+[![Ollama](https://img.shields.io/badge/Ollama-compatible-blueviolet.svg)](https://ollama.com/)
 
 English | [日本語](./README.md)
 
-## Overview
+### Overview
 
 A benchmark tool for comparing performance of multiple Ollama models in Google Colab environment. Utilizes free T4 GPU to measure generation speed, response time, memory usage, and other metrics.
 
-### Key Features
+#### Key Features
 
 - Checkbox-based model selection UI
 - Comprehensive performance metrics (speed, TTFT, model size, etc.)
@@ -19,22 +19,22 @@ A benchmark tool for comparing performance of multiple Ollama models in Google C
 - Visualization with graphs and tables
 - Model size caching
 
-### Target Users
+#### Target Users
 
 - Developers who need quantitative model comparisons
 - Engineers selecting optimal models for projects
 - Researchers conducting benchmarks without paid APIs
 
-## Quick Start
+### Quick Start
 
-### Runtime Environment
+#### Runtime Environment
 
 **English version:**
 ```
 https://colab.research.google.com/github/hiroaki-com/ollama-llm-benchmark/blob/main/ollama_multi_model_benchmarker_en.ipynb
 ```
 
-### Basic Execution Steps
+#### Basic Execution Steps
 
 1. Open notebook in Google Colab
 2. Runtime > Change runtime type > Select T4 GPU
@@ -43,9 +43,9 @@ https://colab.research.google.com/github/hiroaki-com/ollama-llm-benchmark/blob/m
 5. Run Benchmarker cell
 6. Save results to Google Drive (optional)
 
-## Usage
+### Usage
 
-### Model List Configuration
+#### Model List Configuration
 
 Specify test target models in comma-separated format in Model Registry cell.
 
@@ -63,7 +63,7 @@ model_list = "qwen3:8b, qwen3:14b, qwen2.5-coder:7b, ministral-3:8b"
 
 Verify model names at [https://ollama.com/search](https://ollama.com/search).
 
-### Benchmark Configuration
+#### Benchmark Configuration
 
 Configure parameters in Benchmarker cell.
 
@@ -83,7 +83,7 @@ custom_test_prompt = "Write a Python function to calculate Fibonacci sequence"
 custom_test_prompt = "Summarize the following article in 3 sentences..."
 ```
 
-### Output Results
+#### Output Results
 
 Results are displayed after benchmark execution.
 
@@ -111,9 +111,9 @@ Google Drive/MyDrive/ollama_benchmark/
 └── model_size_cache.json           # Model size cache
 ```
 
-## Metrics
+### Metrics
 
-### Key Metrics
+#### Key Metrics
 
 | Metric | Description | Unit |
 |:---|:---|:---:|
@@ -125,7 +125,7 @@ Google Drive/MyDrive/ollama_benchmark/
 | Load Time | VRAM loading time | seconds |
 | Size | Model disk/VRAM size | GB |
 
-### Detailed Data Available
+#### Detailed Data Available
 
 Data collected and saved during benchmark execution:
 
@@ -153,7 +153,7 @@ Data collected and saved during benchmark execution:
 - `gpu_type`: GPU used (typically "Tesla T4")
 - `python_version`: Python version
 
-### Default Prompt
+#### Default Prompt
 
 ```
 Write a recursive Python function with type hints and a docstring to compute 
@@ -163,7 +163,7 @@ expected result.
 
 Customizable via `custom_test_prompt` parameter.
 
-## Tech Stack
+### Tech Stack
 
 - Runtime: Google Colab (Python 3.10+)
 - LLM Engine: Ollama
@@ -171,9 +171,9 @@ Customizable via `custom_test_prompt` parameter.
 - UI: ipywidgets
 - Storage: Google Drive API
 
-## Advanced Configuration
+### Advanced Configuration
 
-### Model Size Cache
+#### Model Size Cache
 
 Measured model sizes are cached to reduce execution time on subsequent runs.
 
@@ -198,16 +198,16 @@ Automatically checks available disk space before execution.
 - Minimum free space for unknown models: 20GB
 
 
-## License
+### License
 
 MIT License. See [LICENSE](LICENSE) for details.
 
-## Credits
+### Credits
 
 - [Ollama](https://ollama.com/) - Local LLM execution engine
 - [Google Colab](https://colab.research.google.com/) - Free GPU environment
 
-## Support
+### Support
 
 - Bug reports: [Issues](../../issues)
 - Questions & discussions: [Discussions](../../discussions)

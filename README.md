@@ -1,17 +1,17 @@
 # Ollama Multi-Model Benchmarker
 
-![Python](https://img.shields.io/badge/python-3.10+-blue.svg)
-![License](https://img.shields.io/badge/license-MIT-green.svg)
-![Colab](https://img.shields.io/badge/platform-Google%20Colab-orange.svg)
-![Ollama](https://img.shields.io/badge/Ollama-compatible-blueviolet.svg)
+[![Python](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Colab](https://img.shields.io/badge/platform-Google%20Colab-orange.svg)](https://colab.research.google.com/github/hiroaki-com/ollama-llm-benchmark/blob/main/ollama_multi_model_benchmarker_ja.ipynb)
+[![Ollama](https://img.shields.io/badge/Ollama-compatible-blueviolet.svg)](https://ollama.com/)
 
 [English](./README_EN.md) | 日本語
 
-## 概要
+### 概要
 
 Google Colab環境で複数のOllamaモデルの性能を比較するベンチマークツールです。無料のT4 GPUを使用して、生成速度、応答時間、メモリ使用量などの指標を測定できます。
 
-### 主な機能
+#### 主な機能
 
 - チェックボックスベースのモデル選択UI
 - 包括的な性能指標の測定（生成速度、TTFT、モデルサイズ等）
@@ -19,22 +19,22 @@ Google Colab環境で複数のOllamaモデルの性能を比較するベンチ�
 - グラフとテーブルによる結果の可視化
 - モデルサイズのキャッシング機能
 
-### 対象ユーザー
+#### 対象ユーザー
 
-- 複数のLLMモデルを定量的に比較したい開発者
+- 複数のLLMモデルを簡単に定量比較したい開発者
 - プロジェクトに適したモデルを選定する必要がある技術者
 - 有料APIを使わずにベンチマークを実施したい研究者
 
-## クイックスタート
+### クイックスタート
 
-### 実行環境
+#### 実行環境
 
 **日本語版:**
 ```
 https://colab.research.google.com/github/hiroaki-com/ollama-llm-benchmark/blob/main/ollama_multi_model_benchmarker_ja.ipynb
 ```
 
-### 基本的な実行手順
+#### 基本的な実行手順
 
 1. Google Colabでノートブックを開きます
 2. Runtime > Change runtime type > T4 GPU を選択します
@@ -43,11 +43,11 @@ https://colab.research.google.com/github/hiroaki-com/ollama-llm-benchmark/blob/m
 5. Benchmarkerセルを実行します
 6. 結果をGoogle Driveに保存できます（オプション）
 
-## 測定データ
+### 測定データ
 
-### パフォーマンス指標
+#### パフォーマンス指標
 
-### モデルリストの設定
+#### モデルリストの設定
 
 Model Registryセルで、テスト対象のモデルをカンマ区切りで指定します。
 
@@ -63,9 +63,9 @@ model_list = "qwen3:8b, qwen3:14b, qwen2.5-coder:7b, ministral-3:8b"
 | 14B | 中速 | 実用範囲 |
 | 20B+ | 低速 | 非推奨 |
 
-モデル名は [https://ollama.com/search](https://ollama.com/search) で確認できます。
+モデル名は [https://ollama.com/search](https://ollama.com/search) でご確認いただけます。
 
-### ベンチマーク設定
+#### ベンチマーク設定
 
 Benchmarkerセルで以下のパラメータを設定できます。
 
@@ -85,7 +85,7 @@ custom_test_prompt = "Write a Python function to calculate Fibonacci sequence"
 custom_test_prompt = "以下の文章を3行で要約してください：..."
 ```
 
-### 出力結果
+#### 出力結果
 
 ベンチマーク実行後、以下の形式で結果が表示されます。
 
@@ -113,9 +113,9 @@ Google Drive/MyDrive/ollama_benchmark/
 └── model_size_cache.json           # モデルサイズキャッシュ
 ```
 
-## 測定指標
+### 測定指標
 
-### 主要メトリクス
+#### 主要メトリクス
 
 | 指標 | 説明 | 単位 |
 |:---|:---|:---:|
@@ -127,7 +127,7 @@ Google Drive/MyDrive/ollama_benchmark/
 | Load Time | VRAMロード時間 | 秒 |
 | Size | ディスク/VRAMサイズ | GB |
 
-### 取得できる詳細データ
+#### 取得できる詳細データ
 
 ベンチマーク実行時に取得・保存されるデータの詳細：
 
@@ -155,7 +155,7 @@ Google Drive/MyDrive/ollama_benchmark/
 - `gpu_type`: 使用GPU（通常は "Tesla T4"）
 - `python_version`: Pythonバージョン
 
-### デフォルトプロンプト
+#### デフォルトプロンプト
 
 ```
 Write a recursive Python function with type hints and a docstring to compute 
@@ -165,7 +165,7 @@ expected result.
 
 `custom_test_prompt`パラメータでカスタマイズできます。
 
-## 技術スタック
+### 技術スタック
 
 - Runtime: Google Colab (Python 3.10+)
 - LLM Engine: Ollama
@@ -173,9 +173,9 @@ expected result.
 - UI: ipywidgets
 - Storage: Google Drive API
 
-## 高度な設定
+### 高度な設定
 
-### モデルサイズキャッシュ
+#### モデルサイズキャッシュ
 
 測定済みモデルのサイズはキャッシュされ、次回実行時の時間を短縮します。
 
@@ -186,50 +186,29 @@ expected result.
 }
 ```
 
-### タイムアウト調整
+#### タイムアウト調整
 
 ```python
 timeout_seconds = 2000  # 大きなモデルや複雑なプロンプトの場合に設定します
 ```
 
-### ディスク容量チェック
+#### ディスク容量チェック
 
 実行前に自動的にディスク容量を確認します。
 
 - 安全マージン: 2GB
 - 未知モデルの最小空き容量: 20GB
 
-## トラブルシューティング
-
-### GPU認識エラー
-
-```bash
-# Runtime > Change runtime type > T4 GPU を選択してください
-# Runtime > Restart runtime で再起動します
-```
-
-### メモリ不足
-
-- より小さいモデル（8B以下）を選択してください
-- テスト対象数を減らしてください
-- ランタイムを再起動してみてください
-
-### タイムアウト
-
-```python
-timeout_seconds = 2000  # より大きな値に設定してください
-```
-
-## ライセンス
+### ライセンス
 
 MIT License. 詳細は[LICENSE](LICENSE)を参照してください。
 
-## クレジット
+### クレジット
 
 - [Ollama](https://ollama.com/) - ローカルLLM実行エンジン
 - [Google Colab](https://colab.research.google.com/) - 無料GPU環境
 
-## サポート
+### サポート
 
 - バグ報告: [Issues](../../issues)
 - 質問・議論: [Discussions](../../discussions)

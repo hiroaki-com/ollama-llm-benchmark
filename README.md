@@ -7,6 +7,14 @@
 
 [English](./README_EN.md) | 日本語
 
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/1902325b-695c-445e-aad1-df50977b942e" alt="UI" height="600"/></td>
+    <td><img src="https://github.com/user-attachments/assets/7d07fc00-113f-4d4a-9e7d-18dd8c138e7d" alt="Result 1" height="600"/></td>
+    <td><img src="https://github.com/user-attachments/assets/bde4e010-7d5c-4fdf-9798-022b4182052a" alt="Result 2" height="600"/></td>
+  </tr>
+</table>
+
 ### 概要
 
 Google Colab環境で複数のOllamaモデルの性能を比較するベンチマークツールです。無料のT4 GPUを使用して、生成速度、応答時間、メモリ使用量などの指標を測定できます。

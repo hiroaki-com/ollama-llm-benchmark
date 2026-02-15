@@ -7,6 +7,14 @@
 
 English | [日本語](./README.md)
 
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/f707af33-81ca-427b-85dd-f9b3d32e3280" alt="UI" height="600"/></td>
+    <td><img src="https://github.com/user-attachments/assets/7d07fc00-113f-4d4a-9e7d-18dd8c138e7d" alt="Result 1" height="600"/></td>
+    <td><img src="https://github.com/user-attachments/assets/bde4e010-7d5c-4fdf-9798-022b4182052a" alt="Result 2" height="600"/></td>
+  </tr>
+</table>
+
 ### Overview
 
 A benchmark tool for comparing performance of multiple Ollama models in Google Colab environment. Utilizes free T4 GPU to measure generation speed, response time, memory usage, and other metrics.

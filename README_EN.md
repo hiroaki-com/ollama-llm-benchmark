@@ -7,6 +7,8 @@
 
 English | [日本語](./README.md)
 
+https://github.com/user-attachments/assets/843f3ff9-5ef8-43d3-bc17-9e617f677a97
+
 <table>
   <tr>
     <td><img src="https://github.com/user-attachments/assets/f707af33-81ca-427b-85dd-f9b3d32e3280" alt="UI" height="600"/></td>

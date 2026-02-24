@@ -7,9 +7,7 @@
 
 [English](./README_EN.md) | 日本語
 
-
-https://github.com/user-attachments/assets/9fdd3483-0c88-4e08-a53e-629d22e0477c
-
+https://github.com/user-attachments/assets/e2fc8409-84b3-485a-a0ea-20a2ed8aabae
 
 <table>
   <tr>
